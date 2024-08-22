@@ -1,0 +1,321 @@
+/* Padding adjustments for smaller screens */
+@media (max-width: 576px) {
+    section {
+        padding: 30px 20px;
+    }
+}
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    font-family: "Poppins", sans-serif;
+}
+:root {
+    --main-color: aliceblue;
+    --second-color: rgb(104, 102, 102);
+    --text-color: black;
+    --gradient: linear-gradient(to right, var(--main-color), var(--second-color));
+}
+/* Custom scroll Bar */
+html::-webkit-scrollbar {
+    width: 0.5rem;
+}
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 5px;
+}
+section {
+    padding: 50px 100px;
+}
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 100px;
+    background-color: #00fabd;
+}
+
+/* Responsive adjustments for header */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+    .navbar {
+        display: none; /* Hide navbar on small screens */
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbar.active {
+        display: flex; /* Show navbar when menu icon is clicked */
+    }
+    #menu-icon {
+        display: block; /* Show menu icon */
+    }
+    .header-btn {
+        margin-top: 10px;
+        flex-direction: column;
+    }
+    .header-btn a {
+        margin: 5px 0;
+    }
+}
+
+/* Navbar and links styling */
+.nav-item {
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+}
+
+.icon {
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+ .logo {
+    padding-left: 0;
+    float: left;
+    padding-top: 10px;
+    margin-left: -70px;
+} 
+.navbar {
+    display: flex;
+}
+.navbar li {
+    position: relative;
+}
+.navbar a {
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+.navbar a:hover{
+    color: goldenrod;
+}
+#menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+.header-btn a {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px;
+    color: var(--text-color); /* Use your text color */
+    text-decoration: none;
+}
+.header-btn a i {
+    margin-right: 5px; /* Space between icon and text */
+}
+
+/* IMAGE */
+ /* Slider container */
+ .slider-container {
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+}
+.slides {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    font-weight: 500;
+    font-size: x-large;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+.slide h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.slide p {
+    font-size: 1.5rem;
+}
+
+
+
+
+/* Background images for slides */
+.slide1 {
+    background-image: url(Assets/images/marce.jpg);
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    width: auto;
+    height: 700px;
+}
+.slide1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+.slide-content button {
+    background-color: #00fabd; 
+    color: black; 
+    font-weight: bold; 
+    padding: 10px 20px; 
+    font-size: 18px; 
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+}
+
+.slide-content button:hover {
+    background-color: darkblue; 
+    color: #fff;
+}
+
+/* slide2 */
+.slide2 {
+    background-image: url(Assets/images/hyundai.jpg);
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    width: auto;
+    height: 700px;
+}
+.slide2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+.slide-content button {
+    background-color: #00fabd; 
+    color: black; 
+    font-weight: bold; 
+    padding: 10px 20px; 
+    font-size: 18px; 
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+}
+
+.slide-content button:hover {
+    background-color: darkblue; 
+    color: #fff;
+}
+
+
+
+
+
+/* footer part */
+footer {
+    position: relative;
+    width: 100%;
+    background: #232424;
+    min-height: 100px;
+    font-weight: 500;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: slideUp 1s ease-in-out; /* Add animation */
+}
+
+footer .social-icons,
+footer .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+footer .social-icons li,
+footer .menu li {
+    list-style: none;
+}
+
+footer .social-icons li a {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 20px; /* Increased spacing between icons */
+    display: inline-block;
+    transition: 0.5s;
+}
+
+footer .social-icons li a:hover {
+    transform: translateY(-10px); /* Added smooth upward hover effect */
+    color: #00fabd;
+}
+
+footer .menu li a {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+}
+
+footer .menu li a:hover {
+    color: #00fabd;
+    opacity: 0.8; /* Changed opacity effect for hover */
+}
+
+footer p {
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* Add keyframes for slide-up animation */
+@keyframes slideUp {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
